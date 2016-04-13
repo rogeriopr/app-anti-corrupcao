@@ -7,13 +7,29 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class FiscalizarViewController: UIViewController {
+class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    ///
+    @IBOutlet weak var mapaFiscalizar: MKMapView!
+    
+    @IBOutlet weak var fiscalizatTitleLabel: UINavigationItem!
+    
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.mapaFiscalizar.showsUserLocation = true
+        self.mapaFiscalizar.zoomEnabled = true
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.requestAlwaysAuthorization()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +37,5 @@ class FiscalizarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

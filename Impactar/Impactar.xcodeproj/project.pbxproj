@@ -20,6 +20,11 @@
 		550CBC9D1CBEB65D00634EEB /* MaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBC9C1CBEB65D00634EEB /* MaisViewController.swift */; };
 		550CBC9F1CBEB67400634EEB /* DetalhesItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBC9E1CBEB67400634EEB /* DetalhesItemViewController.swift */; };
 		550CBCA11CBEB68400634EEB /* DetalhesSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA01CBEB68400634EEB /* DetalhesSocialViewController.swift */; };
+		550CBCA31CBEB87000634EEB /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA21CBEB87000634EEB /* Styles.swift */; };
+		550CBCA61CBEBE6200634EEB /* FiscalizarNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA51CBEBE6200634EEB /* FiscalizarNavVC.swift */; };
+		550CBCA81CBEBE7100634EEB /* SocialNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA71CBEBE7100634EEB /* SocialNavVC.swift */; };
+		550CBCAA1CBEBE8000634EEB /* MaisNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA91CBEBE8000634EEB /* MaisNavVC.swift */; };
+		550CBCAC1CBEBE9100634EEB /* DenunciarNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		550CBC9C1CBEB65D00634EEB /* MaisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaisViewController.swift; sourceTree = "<group>"; };
 		550CBC9E1CBEB67400634EEB /* DetalhesItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesItemViewController.swift; sourceTree = "<group>"; };
 		550CBCA01CBEB68400634EEB /* DetalhesSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalhesSocialViewController.swift; sourceTree = "<group>"; };
+		550CBCA21CBEB87000634EEB /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		550CBCA51CBEBE6200634EEB /* FiscalizarNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiscalizarNavVC.swift; sourceTree = "<group>"; };
+		550CBCA71CBEBE7100634EEB /* SocialNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNavVC.swift; sourceTree = "<group>"; };
+		550CBCA91CBEBE8000634EEB /* MaisNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaisNavVC.swift; sourceTree = "<group>"; };
+		550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciarNavVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +123,7 @@
 				550CBC921CBEB59000634EEB /* View */,
 				550CBC911CBEB58B00634EEB /* Model */,
 				550CBC631CBEB2EE00634EEB /* AppDelegate.swift */,
-				550CBC671CBEB2EE00634EEB /* Main.storyboard */,
 				550CBC6A1CBEB2EE00634EEB /* Assets.xcassets */,
-				550CBC6C1CBEB2EE00634EEB /* LaunchScreen.storyboard */,
 				550CBC6F1CBEB2EE00634EEB /* Info.plist */,
 			);
 			path = Impactar;
@@ -142,6 +150,7 @@
 		550CBC911CBEB58B00634EEB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				550CBCA21CBEB87000634EEB /* Styles.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,6 +158,9 @@
 		550CBC921CBEB59000634EEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				550CBCA41CBEBE2F00634EEB /* NavigationControllers */,
+				550CBC671CBEB2EE00634EEB /* Main.storyboard */,
+				550CBC6C1CBEB2EE00634EEB /* LaunchScreen.storyboard */,
 				550CBC941CBEB5E600634EEB /* TabBarController.swift */,
 				550CBC961CBEB62200634EEB /* FiscalizarViewController.swift */,
 				550CBC981CBEB63000634EEB /* DenunciarViewController.swift */,
@@ -165,6 +177,17 @@
 			children = (
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		550CBCA41CBEBE2F00634EEB /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				550CBCA51CBEBE6200634EEB /* FiscalizarNavVC.swift */,
+				550CBCA71CBEBE7100634EEB /* SocialNavVC.swift */,
+				550CBCA91CBEBE8000634EEB /* MaisNavVC.swift */,
+				550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */,
+			);
+			name = NavigationControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,13 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550CBCA31CBEB87000634EEB /* Styles.swift in Sources */,
 				550CBC9B1CBEB64D00634EEB /* SocialViewController.swift in Sources */,
 				550CBC9F1CBEB67400634EEB /* DetalhesItemViewController.swift in Sources */,
 				550CBC991CBEB63000634EEB /* DenunciarViewController.swift in Sources */,
 				550CBC9D1CBEB65D00634EEB /* MaisViewController.swift in Sources */,
 				550CBC971CBEB62200634EEB /* FiscalizarViewController.swift in Sources */,
+				550CBCAA1CBEBE8000634EEB /* MaisNavVC.swift in Sources */,
+				550CBCA81CBEBE7100634EEB /* SocialNavVC.swift in Sources */,
 				550CBCA11CBEB68400634EEB /* DetalhesSocialViewController.swift in Sources */,
 				550CBC641CBEB2EE00634EEB /* AppDelegate.swift in Sources */,
+				550CBCA61CBEBE6200634EEB /* FiscalizarNavVC.swift in Sources */,
+				550CBCAC1CBEBE9100634EEB /* DenunciarNavVC.swift in Sources */,
 				550CBC951CBEB5E600634EEB /* TabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +560,7 @@
 				550CBC8A1CBEB2EE00634EEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		550CBC8B1CBEB2EE00634EEB /* Build configuration list for PBXNativeTarget "ImpactarTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +569,7 @@
 				550CBC8D1CBEB2EE00634EEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		550CBC8E1CBEB2EE00634EEB /* Build configuration list for PBXNativeTarget "ImpactarUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +578,7 @@
 				550CBC901CBEB2EE00634EEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

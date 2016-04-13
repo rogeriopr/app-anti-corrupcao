@@ -28,7 +28,7 @@
         <!--Item-->
         <scene sceneID="VC2-V2-mpR">
             <objects>
-                <navigationController id="g8d-V2-T6U" sceneMemberID="viewController">
+                <navigationController id="g8d-V2-T6U" customClass="FiscalizarNavVC" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Y6k-ei-TIL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNX-Xr-mPd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="920" y="-922"/>
         </scene>
-        <!--Fiscalizar View Controller-->
+        <!--Fiscalizar-->
         <scene sceneID="VBS-kj-ILI">
             <objects>
                 <viewController id="0Vh-xR-bCg" customClass="FiscalizarViewController" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,15 +53,33 @@
                     <view key="view" contentMode="scaleToFill" id="oYt-Bn-FoU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zIX-RJ-Lbs">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Vh-xR-bCg" id="VRW-UE-WrR"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vUR-jF-nWN" firstAttribute="top" secondItem="zIX-RJ-Lbs" secondAttribute="bottom" id="MhK-Dh-S7N"/>
+                            <constraint firstItem="zIX-RJ-Lbs" firstAttribute="top" secondItem="obm-VC-STx" secondAttribute="bottom" id="O5R-h1-p05"/>
+                            <constraint firstItem="zIX-RJ-Lbs" firstAttribute="leading" secondItem="oYt-Bn-FoU" secondAttribute="leading" id="xVz-3H-3WC"/>
+                            <constraint firstAttribute="trailing" secondItem="zIX-RJ-Lbs" secondAttribute="trailing" id="ycq-Ry-X6J"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="uKT-P5-Ccd"/>
+                    <navigationItem key="navigationItem" title="Fiscalizar" id="uKT-P5-Ccd"/>
+                    <connections>
+                        <outlet property="fiscalizatTitleLabel" destination="uKT-P5-Ccd" id="nLW-mR-BA9"/>
+                        <outlet property="mapaFiscalizar" destination="zIX-RJ-Lbs" id="ICJ-EE-Pam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2IK-le-gPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="-922"/>
         </scene>
-        <!--Denunciar View Controller-->
+        <!--Denunciar-->
         <scene sceneID="gD6-Iv-gRw">
             <objects>
                 <viewController id="44Z-VC-Pdb" customClass="DenunciarViewController" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,13 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pqM-rJ-aKY"/>
+                    <navigationItem key="navigationItem" title="Denunciar" id="pqM-rJ-aKY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgm-bS-P6q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="-207"/>
         </scene>
-        <!--Social View Controller-->
+        <!--Social-->
         <scene sceneID="Qj4-oH-nzI">
             <objects>
                 <viewController id="Wy0-N9-fHy" customClass="SocialViewController" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,15 +109,32 @@
                     <view key="view" contentMode="scaleToFill" id="pYT-XJ-7dK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="106-n4-rqG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Wy0-N9-fHy" id="udl-OI-2Fi"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="106-n4-rqG" firstAttribute="top" secondItem="jly-7X-WBL" secondAttribute="bottom" id="CBz-h3-brY"/>
+                            <constraint firstItem="sM8-AX-EWe" firstAttribute="top" secondItem="106-n4-rqG" secondAttribute="bottom" id="LpL-eg-HLW"/>
+                            <constraint firstItem="106-n4-rqG" firstAttribute="leading" secondItem="pYT-XJ-7dK" secondAttribute="leading" id="Q11-we-vMP"/>
+                            <constraint firstAttribute="trailing" secondItem="106-n4-rqG" secondAttribute="trailing" id="u1E-qu-5Vn"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Ujy-Ze-VPl"/>
+                    <navigationItem key="navigationItem" title="Social" id="Ujy-Ze-VPl"/>
+                    <connections>
+                        <outlet property="socialMapa" destination="106-n4-rqG" id="Csn-cV-cvs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cL-b0-I6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="492"/>
         </scene>
-        <!--Mais View Controller-->
+        <!--Mais-->
         <scene sceneID="YXO-rA-OfD">
             <objects>
                 <viewController id="Hfu-im-7OO" customClass="MaisViewController" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,6 +147,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Mais" id="XBd-pz-ei3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oke-oR-Sbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,7 +156,7 @@
         <!--Item-->
         <scene sceneID="lfP-IE-Jwm">
             <objects>
-                <navigationController id="Y4E-qw-58c" sceneMemberID="viewController">
+                <navigationController id="Y4E-qw-58c" customClass="DenunciarNavVC" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Akl-Mn-zI2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6O-or-LM1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -137,7 +173,7 @@
         <!--Item-->
         <scene sceneID="PLX-Ix-Dof">
             <objects>
-                <navigationController id="l14-VZ-VTE" sceneMemberID="viewController">
+                <navigationController id="l14-VZ-VTE" customClass="SocialNavVC" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="0hP-2K-tQN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ID-l6-GC8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -154,12 +190,15 @@
         <!--Item-->
         <scene sceneID="0mz-Sj-JLl">
             <objects>
-                <navigationController id="B0u-2T-q3D" sceneMemberID="viewController">
+                <navigationController id="B0u-2T-q3D" customClass="MaisNavVC" customModule="Impactar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8Qd-hU-piL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8or-Yj-Ccs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="Hfu-im-7OO" kind="relationship" relationship="rootViewController" id="7co-5u-CNm"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFW-Zc-k3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,5 +1,5 @@
 //
-//  SocialViewController.swift
+//  SocialNavVC.swift
 //  Impactar
 //
 //  Created by Davi Rodrigues on 13/04/16.
@@ -7,17 +7,14 @@
 //
 
 import UIKit
-import MapKit
-import CoreLocation
 
-class SocialViewController: UIViewController {
+class SocialNavVC: UINavigationController {
 
-    @IBOutlet weak var socialMapa: MKMapView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Inicializa cor da navigationBar
+        self.navigationBar.barTintColor = Styles.azulImpacta
     }
 
     override func didReceiveMemoryWarning() {
