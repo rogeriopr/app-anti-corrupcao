@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -90,7 +91,39 @@
                     <view key="view" contentMode="scaleToFill" id="AFA-pM-gU7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-98-Gcy">
+                                <rect key="frame" x="0.0" y="496" width="600" height="55"/>
+                                <state key="normal" title="Enviar denúncia">
+                                    <color key="titleColor" red="0.89803921568627454" green="0.69803921568627447" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDa-nA-Dqz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fZY-PM-uBL">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZY-PM-uBL" id="aYs-wd-WUD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="top" secondItem="DxX-K4-pTg" secondAttribute="bottom" id="2MB-DL-SLX"/>
+                            <constraint firstAttribute="trailing" secondItem="SaG-98-Gcy" secondAttribute="trailing" id="OQu-rK-MGx"/>
+                            <constraint firstItem="SaG-98-Gcy" firstAttribute="top" secondItem="hDa-nA-Dqz" secondAttribute="bottom" id="Wjd-fu-iuT"/>
+                            <constraint firstAttribute="trailing" secondItem="hDa-nA-Dqz" secondAttribute="trailing" id="g9n-F6-zCL"/>
+                            <constraint firstItem="lWf-3a-vyb" firstAttribute="top" secondItem="SaG-98-Gcy" secondAttribute="bottom" id="gDL-7y-dhb"/>
+                            <constraint firstItem="SaG-98-Gcy" firstAttribute="leading" secondItem="AFA-pM-gU7" secondAttribute="leading" id="qaQ-Cb-Ggp"/>
+                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="height" secondItem="AFA-pM-gU7" secondAttribute="height" multiplier="72/100" id="sHJ-eS-pVR"/>
+                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="leading" secondItem="AFA-pM-gU7" secondAttribute="leading" id="tfR-kM-D97"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Denunciar" id="pqM-rJ-aKY"/>
                 </viewController>

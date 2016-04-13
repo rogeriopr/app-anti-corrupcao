@@ -15,4 +15,6 @@ class Styles: NSObject {
     
     static let cinzaTintColor: UIColor = UIColor(red: 205/255, green: 204/255, blue: 204/255, alpha: 1)
     
+    static let azulOverlay: UIColor = UIColor(red: 68/255, green: 124/255, blue: 162/255, alpha: 1)
+    
 }
