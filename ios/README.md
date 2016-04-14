@@ -1,3 +1,4 @@
-# Impactar ( Ios )
+# Impactar (iOS)
 
-Versão ios do aplicativo Impactar
+### Versão iOS do aplicativo Impactar
+Para versão 7, 8 e 9
