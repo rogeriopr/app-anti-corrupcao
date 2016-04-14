@@ -37,7 +37,7 @@ class DenunciarViewController: UIViewController, UITableViewDelegate, UITableVie
         case 1:
             return 1
         case 2:
-            return 3
+            return 2
         default:
             return 0
         }
@@ -51,10 +51,36 @@ class DenunciarViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! DenunciarTableViewCell
         
-        //if(indexPath) {
-        cell.cellLabel.text = "funfou"
-        cell.cellTextField.placeholder = "aeooo"
-        //}
+        
+        if(indexPath.section == 0) {
+            
+            if(indexPath.row == 0) {
+                cell.cellLabel.text = "Endereço"
+                cell.cellTextField.placeholder = "Rua das Andorinhas, Bairro dos Sabiás"
+            } else if(indexPath.row == 1) {
+                cell.cellLabel.text = "Cep"
+                cell.cellTextField.placeholder = "12345-678"
+            } else if(indexPath.row == 2) {
+                cell.cellLabel.text = "Nome do local"
+                cell.cellTextField.placeholder = "Escola das Cacatuas"
+            }
+            
+        } else if(indexPath.section == 1) {
+            
+            cell.cellLabel.text = "Tipo de inflação"
+            cell.cellTextField.placeholder = "Desvio de verba"
+            
+        } else if(indexPath.section == 2) {
+            
+            if(indexPath.row == 0) {
+                cell.cellLabel.text = "Comentários"
+                cell.cellTextField.placeholder = "Seu comentário aqui"
+            } else if(indexPath.row == 1) {
+                cell.cellLabel.text = "Anexos"
+                cell.cellTextField.placeholder = "Adicionar anexos"
+            }
+            
+        }
         
         
         

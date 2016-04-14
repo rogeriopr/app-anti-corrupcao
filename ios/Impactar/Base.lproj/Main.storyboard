@@ -94,13 +94,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaG-98-Gcy">
-                                <rect key="frame" x="0.0" y="496" width="600" height="55"/>
+                                <rect key="frame" x="0.0" y="500" width="600" height="51"/>
                                 <state key="normal" title="Enviar denúncia">
                                     <color key="titleColor" red="0.89803921568627454" green="0.69803921568627447" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hDa-nA-Dqz">
-                                <rect key="frame" x="0.0" y="64" width="600" height="432"/>
+                                <rect key="frame" x="0.0" y="135" width="600" height="365"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="denunciaCell" id="fZY-PM-uBL" customClass="DenunciarTableViewCell" customModule="Impactar" customModuleProvider="target">
@@ -111,20 +111,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTx-1w-azv">
-                                                    <rect key="frame" x="8" y="8" width="150" height="27.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <rect key="frame" x="8" y="8" width="180" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-ZV-rr0">
-                                                    <rect key="frame" x="158" y="8" width="434" height="27.5"/>
+                                                    <rect key="frame" x="188" y="8" width="404" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ANO-ZV-rr0" firstAttribute="top" secondItem="aYs-wd-WUD" secondAttribute="topMargin" id="Ewe-4v-QZa"/>
-                                                <constraint firstItem="wTx-1w-azv" firstAttribute="width" secondItem="aYs-wd-WUD" secondAttribute="width" multiplier="1/4" id="F3E-Av-o50"/>
+                                                <constraint firstItem="wTx-1w-azv" firstAttribute="width" secondItem="aYs-wd-WUD" secondAttribute="width" multiplier="30/100" id="F3E-Av-o50"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ANO-ZV-rr0" secondAttribute="trailing" id="IdR-Xp-DYx"/>
                                                 <constraint firstItem="wTx-1w-azv" firstAttribute="top" secondItem="aYs-wd-WUD" secondAttribute="topMargin" id="Qjs-5H-VQw"/>
                                                 <constraint firstItem="ANO-ZV-rr0" firstAttribute="leading" secondItem="wTx-1w-azv" secondAttribute="trailing" id="em1-ff-Joy"/>
@@ -144,18 +144,56 @@
                                     <outlet property="delegate" destination="44Z-VC-Pdb" id="MX9-nl-6rZ"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3b-f7-yIw">
+                                <rect key="frame" x="0.0" y="64" width="600" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toda suspeita é bem-vinda :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jJ-cg-qcF">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não hesite! Sua colaboração é muito importante para nós! Importante: Você não será identificado em momento algum" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chS-Dt-SM9">
+                                        <rect key="frame" x="0.0" y="35.5" width="600" height="35.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="chS-Dt-SM9" secondAttribute="bottom" id="1FZ-2Y-aVh"/>
+                                    <constraint firstAttribute="trailing" secondItem="chS-Dt-SM9" secondAttribute="trailing" id="ENU-rG-Oq4"/>
+                                    <constraint firstItem="4jJ-cg-qcF" firstAttribute="height" secondItem="q3b-f7-yIw" secondAttribute="height" multiplier="1/2" id="H8T-wM-kK2"/>
+                                    <constraint firstAttribute="trailing" secondItem="4jJ-cg-qcF" secondAttribute="trailing" id="WIC-eq-xhp"/>
+                                    <constraint firstItem="4jJ-cg-qcF" firstAttribute="top" secondItem="q3b-f7-yIw" secondAttribute="top" id="hyd-3A-fT1"/>
+                                    <constraint firstItem="4jJ-cg-qcF" firstAttribute="leading" secondItem="q3b-f7-yIw" secondAttribute="leading" id="i60-0s-xnx"/>
+                                    <constraint firstItem="chS-Dt-SM9" firstAttribute="leading" secondItem="q3b-f7-yIw" secondAttribute="leading" id="ijm-8H-JM3"/>
+                                    <constraint firstItem="chS-Dt-SM9" firstAttribute="top" secondItem="4jJ-cg-qcF" secondAttribute="bottom" id="qd1-0B-7z7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hDa-nA-Dqz" firstAttribute="top" secondItem="DxX-K4-pTg" secondAttribute="bottom" id="2MB-DL-SLX"/>
+                            <constraint firstItem="q3b-f7-yIw" firstAttribute="leading" secondItem="AFA-pM-gU7" secondAttribute="leading" id="5Jz-d0-1cf"/>
+                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="top" secondItem="q3b-f7-yIw" secondAttribute="bottom" id="CPc-Q8-ZnZ"/>
+                            <constraint firstItem="q3b-f7-yIw" firstAttribute="height" secondItem="AFA-pM-gU7" secondAttribute="height" multiplier="13/110" id="HXj-kF-ATQ"/>
+                            <constraint firstItem="q3b-f7-yIw" firstAttribute="top" secondItem="DxX-K4-pTg" secondAttribute="bottom" id="MOs-m2-Eeb"/>
                             <constraint firstAttribute="trailing" secondItem="SaG-98-Gcy" secondAttribute="trailing" id="OQu-rK-MGx"/>
                             <constraint firstItem="SaG-98-Gcy" firstAttribute="top" secondItem="hDa-nA-Dqz" secondAttribute="bottom" id="Wjd-fu-iuT"/>
                             <constraint firstAttribute="trailing" secondItem="hDa-nA-Dqz" secondAttribute="trailing" id="g9n-F6-zCL"/>
                             <constraint firstItem="lWf-3a-vyb" firstAttribute="top" secondItem="SaG-98-Gcy" secondAttribute="bottom" id="gDL-7y-dhb"/>
                             <constraint firstItem="SaG-98-Gcy" firstAttribute="leading" secondItem="AFA-pM-gU7" secondAttribute="leading" id="qaQ-Cb-Ggp"/>
-                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="height" secondItem="AFA-pM-gU7" secondAttribute="height" multiplier="72/100" id="sHJ-eS-pVR"/>
+                            <constraint firstItem="hDa-nA-Dqz" firstAttribute="height" secondItem="AFA-pM-gU7" secondAttribute="height" multiplier="73/120" id="sHJ-eS-pVR"/>
                             <constraint firstItem="hDa-nA-Dqz" firstAttribute="leading" secondItem="AFA-pM-gU7" secondAttribute="leading" id="tfR-kM-D97"/>
+                            <constraint firstAttribute="trailing" secondItem="q3b-f7-yIw" secondAttribute="trailing" id="znD-Ad-kjR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2MB-DL-SLX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Denunciar" id="pqM-rJ-aKY"/>
                 </viewController>
