@@ -3,7 +3,7 @@
 O aplicativo Impactar é um projeto para o [hackathon](http://justica.gov.br/labpi)
 do Ministério da Justiça para participação no combate à corrupção.
 
-O aplicativo tem quatro fucnionalidades principais, a saber:
+O aplicativo tem quatro funcionalidades principais, a saber:
 
 ## Calculadora da Corrupção
 Basta o usuário inserir sua renda mensal, de forma sigilosa, apertar ok
