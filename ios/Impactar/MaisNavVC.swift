@@ -14,7 +14,7 @@ class MaisNavVC: UINavigationController {
         super.viewDidLoad()
 
         //Inicializa cor da navigationBar
-        self.navigationBar.barTintColor = Styles.azulImpacta
+        //self.navigationBar.barTintColor = Styles.azulImpacta
     }
 
     override func didReceiveMemoryWarning() {

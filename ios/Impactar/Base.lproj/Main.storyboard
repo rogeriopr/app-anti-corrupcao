@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -102,15 +103,46 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="432"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fZY-PM-uBL">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="denunciaCell" id="fZY-PM-uBL" customClass="DenunciarTableViewCell" customModule="Impactar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZY-PM-uBL" id="aYs-wd-WUD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTx-1w-azv">
+                                                    <rect key="frame" x="8" y="8" width="150" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANO-ZV-rr0">
+                                                    <rect key="frame" x="158" y="8" width="434" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ANO-ZV-rr0" firstAttribute="top" secondItem="aYs-wd-WUD" secondAttribute="topMargin" id="Ewe-4v-QZa"/>
+                                                <constraint firstItem="wTx-1w-azv" firstAttribute="width" secondItem="aYs-wd-WUD" secondAttribute="width" multiplier="1/4" id="F3E-Av-o50"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ANO-ZV-rr0" secondAttribute="trailing" id="IdR-Xp-DYx"/>
+                                                <constraint firstItem="wTx-1w-azv" firstAttribute="top" secondItem="aYs-wd-WUD" secondAttribute="topMargin" id="Qjs-5H-VQw"/>
+                                                <constraint firstItem="ANO-ZV-rr0" firstAttribute="leading" secondItem="wTx-1w-azv" secondAttribute="trailing" id="em1-ff-Joy"/>
+                                                <constraint firstItem="wTx-1w-azv" firstAttribute="leading" secondItem="aYs-wd-WUD" secondAttribute="leadingMargin" id="fPF-0m-fM4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wTx-1w-azv" secondAttribute="bottom" id="hzS-wX-KTa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ANO-ZV-rr0" secondAttribute="bottom" id="seh-4F-V3U"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="wTx-1w-azv" id="2q9-aY-97x"/>
+                                            <outlet property="cellTextField" destination="ANO-ZV-rr0" id="Xlz-1z-WU7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="44Z-VC-Pdb" id="JEG-g9-yeo"/>
+                                    <outlet property="delegate" destination="44Z-VC-Pdb" id="MX9-nl-6rZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

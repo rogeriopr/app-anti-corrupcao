@@ -14,9 +14,11 @@ class FiscalizarNavVC: UINavigationController {
         super.viewDidLoad()
 
         //Inicializa cor da navigationBar
-        self.navigationBar.barTintColor = Styles.azulImpacta
+        //self.navigationBar.barTintColor = Styles.azulImpacta
         
-        self.navigationBar.tintColor = Styles.cinzaTintColor
+        //self.navigationBar.tintColor = Styles.cinzaTintColor
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

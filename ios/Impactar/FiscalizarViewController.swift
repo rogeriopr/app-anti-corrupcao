@@ -31,6 +31,8 @@ class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationM
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestAlwaysAuthorization()
+        
+        
 
 
     }
