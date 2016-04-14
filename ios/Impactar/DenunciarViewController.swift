@@ -12,6 +12,8 @@ class DenunciarViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let reuseIdentifier = "denunciaCell"
     
+    var keyboard: CGSize = CGSize(width: 0, height: 0)
+    
     let sectionsTitle: [String] = ["Podemos começar? \n Informe os dados relacionados a localização da irregularidade", "Informe os dados relacionados a localização da irregularidade", "Informações adicionais:"]
     let sectionsFooter: [String] = ["Escolha o tipo de infração que melhor se encaixa com a irregularidade"]
 
@@ -101,6 +103,42 @@ class DenunciarViewController: UIViewController, UITableViewDelegate, UITableVie
         
         return ""
         
+    }
+    
+    // MARK: Keyboard
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //
+        return true
+    }
+    
+    
+    func registerForKeyboardNotifications() {
+        let notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter.addObserver(self,
+                                       selector: #selector(DenunciarViewController.keyboardWillBeShown(_:)),
+                                       name: UIKeyboardWillShowNotification,
+                                       object: nil)
+        notificationCenter.addObserver(self,
+                                       selector: #selector(DenunciarViewController.keyboardWillBeHidden(_:)),
+                                       name: UIKeyboardWillHideNotification,
+                                       object: nil)
+    }
+    
+    // Called when the UIKeyboardDidShowNotification is sent.
+    func keyboardWillBeShown(sender: NSNotification) {
+        let info: NSDictionary = sender.userInfo!
+        let value: NSValue = info.valueForKey(UIKeyboardFrameBeginUserInfoKey) as! NSValue
+        let keyboardSize: CGSize = value.CGRectValue().size
+        
+        self.keyboard = keyboardSize
+        self.view.center.y -= keyboardSize.height
+        
+    }
+    
+    // Cawlled when the UIKeyboardWillHideNotification is sent
+    func keyboardWillBeHidden(sender: NSNotification) {
+        self.view.center.y += self.keyboard.height
     }
     
 }

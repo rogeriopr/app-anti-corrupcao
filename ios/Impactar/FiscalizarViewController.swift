@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
     
     ///
     @IBOutlet weak var mapaFiscalizar: MKMapView!
