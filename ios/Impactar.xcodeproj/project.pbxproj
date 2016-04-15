@@ -25,6 +25,8 @@
 		550CBCA81CBEBE7100634EEB /* SocialNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA71CBEBE7100634EEB /* SocialNavVC.swift */; };
 		550CBCAA1CBEBE8000634EEB /* MaisNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCA91CBEBE8000634EEB /* MaisNavVC.swift */; };
 		550CBCAC1CBEBE9100634EEB /* DenunciarNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */; };
+		551234671CBFF31900F2ED92 /* SliderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551234661CBFF31900F2ED92 /* SliderTableViewCell.swift */; };
+		551234691CBFF32800F2ED92 /* MaisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551234681CBFF32800F2ED92 /* MaisTableViewCell.swift */; };
 		552574261CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552574251CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift */; };
 		552574281CBF213100C66CF5 /* DenunciarCellLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552574271CBF213100C66CF5 /* DenunciarCellLabels.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		550CBCA71CBEBE7100634EEB /* SocialNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNavVC.swift; sourceTree = "<group>"; };
 		550CBCA91CBEBE8000634EEB /* MaisNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaisNavVC.swift; sourceTree = "<group>"; };
 		550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciarNavVC.swift; sourceTree = "<group>"; };
+		551234661CBFF31900F2ED92 /* SliderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderTableViewCell.swift; sourceTree = "<group>"; };
+		551234681CBFF32800F2ED92 /* MaisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaisTableViewCell.swift; sourceTree = "<group>"; };
 		552574251CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciarTableViewCell.swift; sourceTree = "<group>"; };
 		552574271CBF213100C66CF5 /* DenunciarCellLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DenunciarCellLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +167,7 @@
 		550CBC921CBEB59000634EEB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				551234651CBFF2F700F2ED92 /* CustomCells */,
 				550CBCA41CBEBE2F00634EEB /* NavigationControllers */,
 				550CBC671CBEB2EE00634EEB /* Main.storyboard */,
 				550CBC6C1CBEB2EE00634EEB /* LaunchScreen.storyboard */,
@@ -173,7 +178,6 @@
 				550CBC9C1CBEB65D00634EEB /* MaisViewController.swift */,
 				550CBC9E1CBEB67400634EEB /* DetalhesItemViewController.swift */,
 				550CBCA01CBEB68400634EEB /* DetalhesSocialViewController.swift */,
-				552574251CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +198,16 @@
 				550CBCAB1CBEBE9100634EEB /* DenunciarNavVC.swift */,
 			);
 			name = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		551234651CBFF2F700F2ED92 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				552574251CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift */,
+				551234661CBFF31900F2ED92 /* SliderTableViewCell.swift */,
+				551234681CBFF32800F2ED92 /* MaisTableViewCell.swift */,
+			);
+			name = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +351,10 @@
 				550CBCA81CBEBE7100634EEB /* SocialNavVC.swift in Sources */,
 				550CBCA11CBEB68400634EEB /* DetalhesSocialViewController.swift in Sources */,
 				550CBC641CBEB2EE00634EEB /* AppDelegate.swift in Sources */,
+				551234671CBFF31900F2ED92 /* SliderTableViewCell.swift in Sources */,
 				552574281CBF213100C66CF5 /* DenunciarCellLabels.swift in Sources */,
 				550CBCA61CBEBE6200634EEB /* FiscalizarNavVC.swift in Sources */,
+				551234691CBFF32800F2ED92 /* MaisTableViewCell.swift in Sources */,
 				550CBCAC1CBEBE9100634EEB /* DenunciarNavVC.swift in Sources */,
 				550CBC951CBEB5E600634EEB /* TabBarController.swift in Sources */,
 				552574261CBF1DEB00C66CF5 /* DenunciarTableViewCell.swift in Sources */,
@@ -433,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Impactar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = davi.Impactar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,6 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Impactar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = davi.Impactar;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -22,6 +22,8 @@ class DenunciarNavVC: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 
 }

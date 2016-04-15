@@ -8,7 +8,10 @@
 
 import UIKit
 
-class MaisViewController: UIViewController {
+class MaisViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let sliderIdentifierCell = "sliderCell"
+    let reuseIdentifier = "maisCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +25,81 @@ class MaisViewController: UIViewController {
     }
     
 
+    //MARK: TableViewDelegate
+    
+    //MARK: TableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch(section) {
+        case 2:
+            return 2
+        default:
+            return 1
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        if(indexPath.section == 0) {
+            let cell = tableView.dequeueReusableCellWithIdentifier(sliderIdentifierCell) as! SliderTableViewCell
+            return cell
+        } else if(indexPath.section == 1){
+            let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as! MaisTableViewCell
+            cell.maisLabel.text = "Calculadora da corrupção"
+            return cell
+        } else if(indexPath.section == 2 && indexPath.row == 0) {
+            let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as! MaisTableViewCell
+            cell.maisLabel.text = "impactar.com.br"
+            return cell
+        }
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as! MaisTableViewCell
+        cell.maisLabel.text = "Desenvolvedores"
+        return cell
+    }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerLabel = UILabel(frame: CGRectMake(8, 8, tableView.frame.width, 2000))
+        
+        headerLabel.text = "Aeoo"
+        headerLabel.font = UIFont(name: "Helvetica-Light", size: 16)
+        headerLabel.sizeToFit()
+        
+        let headerView = UIView()
+        headerView.addSubview(headerLabel)
+        
+        return headerView
     }
     */
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        if(section == 0) {
+            return "LOCALIZAÇÃO"
+        } else if(section == 1) {
+            return "CALCULADORA"
+        }
+        return "SOBRE"
+        
+    }
+    
+    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        
+        if(section == 0) {
+            return "Distância de visualização nos mapas"
+        } else if(section == 1) {
+            return "Descubra quanto a corrupção impacta na sua vida financeira"
+        }
+        return ""
+        
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.view.layer.frame.height/10
+    }
 
 }

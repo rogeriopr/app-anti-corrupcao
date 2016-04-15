@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Impactar-Launch" translatesAutoresizingMaskIntoConstraints="NO" id="Biw-xB-kLc">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Biw-xB-kLc" secondAttribute="trailing" id="780-aA-yhd"/>
-                            <constraint firstItem="Biw-xB-kLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="KCO-6l-5Uc"/>
+                            <constraint firstItem="Biw-xB-kLc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="KCO-6l-5Uc"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Biw-xB-kLc" secondAttribute="bottom" id="wBc-yo-bnA"/>
                             <constraint firstItem="Biw-xB-kLc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ypa-N1-6fG"/>
                         </constraints>

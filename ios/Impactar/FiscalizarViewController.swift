@@ -41,6 +41,8 @@ class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,6 +69,7 @@ class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationM
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
         self.mapaFiscalizar.removeOverlays(self.mapaFiscalizar.overlays)
+        self.mapaFiscalizar.removeAnnotations(self.mapaFiscalizar.annotations)
         
         if(self.zoom == false) {
             let coor = self.mapaFiscalizar.userLocation.location?.coordinate
@@ -80,6 +83,32 @@ class FiscalizarViewController: UIViewController, MKMapViewDelegate, CLLocationM
         circleOverlay.title = ""
         circleOverlay.subtitle = ""
         mapaFiscalizar.addOverlay(circleOverlay)
+        
+        
+        //Adiciona alguns pins
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = mapaFiscalizar.userLocation.coordinate
+        annotation1.coordinate.latitude = annotation1.coordinate.latitude + 0.0010
+        annotation1.coordinate.longitude = annotation1.coordinate.longitude + 0.0027
+        annotation1.title = "Investimento escola Padre Anchieta"
+        annotation1.subtitle = "Detalhes da ação sendo realizada nesta localização"
+        mapaFiscalizar.addAnnotation(annotation1)
+        
+        let annotation2 = MKPointAnnotation()
+        annotation2.coordinate = mapaFiscalizar.userLocation.coordinate
+        annotation2.coordinate.latitude = annotation1.coordinate.latitude + 0.0038
+        annotation2.coordinate.longitude = annotation1.coordinate.longitude - 0.0050
+        annotation2.title = "Reforma praça pública"
+        annotation2.subtitle = "Detalhes da ação sendo realizada nesta localização"
+        mapaFiscalizar.addAnnotation(annotation2)
+        
+        let annotation3 = MKPointAnnotation()
+        annotation3.coordinate = mapaFiscalizar.userLocation.coordinate
+        annotation3.coordinate.latitude = annotation3.coordinate.latitude - 0.0018
+        annotation3.coordinate.longitude = annotation3.coordinate.longitude + 0.0027
+        annotation3.title = "Contratação de funcionários"
+        annotation3.subtitle = "Detalhes da ação sendo realizada nesta localização"
+        mapaFiscalizar.addAnnotation(annotation3)
         
         
     }

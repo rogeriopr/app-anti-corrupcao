@@ -56,6 +56,7 @@ class SocialViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         
         self.socialMapa.removeOverlays(self.socialMapa.overlays)
+        self.socialMapa.removeAnnotations(self.socialMapa.annotations)
         
         if(self.zoom == false) {
             let coor = self.socialMapa.userLocation.location?.coordinate
@@ -69,6 +70,31 @@ class SocialViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         circleOverlay.title = ""
         circleOverlay.subtitle = ""
         socialMapa.addOverlay(circleOverlay)
+        
+        //Adiciona alguns pins
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = socialMapa.userLocation.coordinate
+        annotation1.coordinate.latitude = annotation1.coordinate.latitude + 0.0016
+        annotation1.coordinate.longitude = annotation1.coordinate.longitude - 0.0027
+        annotation1.title = "Doação de alimentos escola Padre Anchieta"
+        annotation1.subtitle = "Detalhes necessidade no local, de motivo colaborativo"
+        socialMapa.addAnnotation(annotation1)
+        
+        let annotation2 = MKPointAnnotation()
+        annotation2.coordinate = socialMapa.userLocation.coordinate
+        annotation2.coordinate.latitude = annotation1.coordinate.latitude - 0.0038
+        annotation2.coordinate.longitude = annotation1.coordinate.longitude + 0.0050
+        annotation2.title = "Doação de alimentos escola Padre Anchieta"
+        annotation2.subtitle = "Detalhes necessidade no local, de motivo colaborativo"
+        socialMapa.addAnnotation(annotation2)
+        
+        let annotation3 = MKPointAnnotation()
+        annotation3.coordinate = socialMapa.userLocation.coordinate
+        annotation3.coordinate.latitude = annotation3.coordinate.latitude - 0.004
+        annotation3.coordinate.longitude = annotation3.coordinate.longitude - 0.0027
+        annotation3.title = "Doação de alimentos escola Padre Anchieta"
+        annotation3.subtitle = "Detalhes necessidade no local, de motivo colaborativo"
+        socialMapa.addAnnotation(annotation3)
         
         
     }
